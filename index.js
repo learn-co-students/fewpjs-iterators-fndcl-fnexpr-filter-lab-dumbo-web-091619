@@ -7,7 +7,7 @@ function findMatching (arr, name) {
 
 function fuzzyMatch (arr, str) {
   return arr.filter(function (name) {
-    return name.slice(0, 3).includes(str)
+    return name.toLowerCase().indexOf(str.toLowerCase()) === 0
   })
 }
 
